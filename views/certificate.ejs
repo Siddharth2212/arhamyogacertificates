@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arham Yoga Certificate Generator</title>
+    <meta name="author" content="Siddharth Sogani">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<meta property="og:description" content="Certificate" />
+  <meta property="og:title" content="Certificate Arham Yoga" />
+  <meta property="og:url" content="https://arhamyogacertificates.herokuapp.com/certificate/<%=resultid%>" />
+  <meta property="og:image" content="<%=imageurl%>" />
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-flat.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/fontawesome.min.js">
+<style>
+    /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  #certificate{
+  width:100%;
+  }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  #certificate{
+  width:70%;
+  }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  #certificate{
+  width:70%;
+  }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  #certificate{
+  width:70%;
+  }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  #certificate{
+  width:70%;
+  }
+  }
+    .container {
+  position: relative;
+  text-align: center;
+  }
+  
+  .bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  }
+  
+  .bottom-left2 {
+  position: absolute;
+  bottom: 0.5%;
+  left: 5%;
+  }
+  
+  .bottom-left3 {
+      position: absolute;
+      top: 64.5%;
+      left: 24.5%;
+  }
+  
+  .bottom-left4 {
+      position: absolute;
+      width: 100%;
+      top: 58%;
+      left: -30%;
+  }
+.bottom-left7 {
+    position: absolute;
+    top: 54.5%;
+    left: 41.5%;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(30, 36, 36);
+}
+  
+.bottom-left8 {
+    position: absolute;
+    width: 100%;
+    font-weight: bolder;
+    top: 49%;
+    left: -11%;
+}
+  
+  .top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  }
+  
+  .top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  }
+  
+  .course-name {
+    position: absolute;
+    top: 49.5%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+  
+  .course-name2 {
+    position: absolute;
+    top: 55.5%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+}
+  
+  .participant-name {
+    position: absolute;
+    top: 50.5%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.participant-name2 {
+    position: absolute;
+    top: 45.5%;
+    left: 51%;
+    font-size: 0.65rem;
+    transform: translate(-50%, -50%);
+}
+  </style>
+    <style>
+        #htmltoimage {
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body style="text-align:center" data-resultid="<%=resultid%>">
+  <div class="container">
+    <div class="mb-1" id="htmltoimage">
+      <img id="certificate" src="<%=imageurl%>" alt="">
+      </div>
+      <div class="row justify-content-center">
+        <div id="share"></div>
+      </div>
+      <!-- <button onclick="downloadimage()" class="clickbtn btn btn-info"><i class="fa fa-download"></i> Download Certificate</button> -->
+      <!-- <button  class="clicksharebtn btn btn-info" disabled><i class="fa fa-download"></i> Share Certificate</button> -->
+  </div>
+    <!-- <div id="htmltoimage">
+        <div class="imgbg">
+            <img id="htmltoimage2" width="100%" src="/bmp.jpg" alt="" srcset="">
+        </div>
+        <h1>Demo page to show example of "How to Create and Download Image of HTML content in webpage Using html2canvas
+            library". Find tutorial page here <a
+                href="http://www.freakyjolly.com/convert-html-document-into-image-jpg-png-from-canvas/"
+                target="_blank">Here</a></h1>. Just click on button below to download Image of this HTML content which
+        is wrapped in an ID named "htmltoimage". Now I am typing some randome stuff, so that image downloaded will have
+        some content to show blah blah blah :P :D <br>
+        <button onclick="downloadimage()" class="clickbtn">Click To Download Image</button>
+    </div> -->
+<script type="text/javascript">
+  $("#share").jsSocials({
+    url: "https://arhamyogacertificates.herokuapp.com/certificate/"+$("body").data("resultid"),
+            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+        });
+</script>
+</body>
+
+</html>

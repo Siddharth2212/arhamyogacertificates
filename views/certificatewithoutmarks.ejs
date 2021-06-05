@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arham Yoga Certificate Generator</title>
+    <meta name="author" content="Siddharth Sogani">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript">
+
+        function downloadimage() {
+            //var container = document.getElementById("image-wrap"); //specific element on page
+            var container = document.getElementById("htmltoimage");; // full page 
+            html2canvas(container, { allowTaint: true }).then(function (canvas) {
+
+                var link = document.createElement("a");
+                document.body.appendChild(link);
+                link.download = "arhamyogacertificate.jpg";
+                link.href = canvas.toDataURL();
+                link.target = '_blank';
+                link.click();
+            });
+        }
+
+    </script>
+
+<style>
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+#certificate{
+width:100%;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+#certificate{
+width:70%;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+#certificate{
+width:70%;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+#certificate{
+width:70%;
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+#certificate{
+width:70%;
+}
+}
+  .container {
+position: relative;
+text-align: center;
+}
+
+.bottom-left {
+position: absolute;
+bottom: 0;
+left: 35%;
+}
+
+.bottom-left2 {
+position: absolute;
+bottom: 0.5%;
+left: 5%;
+}
+
+.bottom-left3 {
+    position: absolute;
+    top: 64.5%;
+    left: 24.5%;
+}
+
+.bottom-left4 {
+    position: absolute;
+    width: 100%;
+    top: 58%;
+    left: -30%;
+}
+.bottom-left7 {
+    position: absolute;
+    top: 64.5%;
+    right: 24.5%;
+}
+
+.bottom-left8 {
+position: absolute;
+width: 100%;
+top: 72%;
+right: 0;
+}
+
+.top-left {
+position: absolute;
+top: 8px;
+left: 16px;
+}
+
+.top-right {
+position: absolute;
+top: 8px;
+right: 16px;
+}
+
+.course-name {
+    position: absolute;
+    top: 41.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.course-name2 {
+position: absolute;
+top: 47.5%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.participant-name {
+position: absolute;
+top: 36.5%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.participant-name2 {
+    position: absolute;
+    top: 33.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+    <style>
+        #htmltoimage {
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body style="text-align:center">
+    <nav class="navbar navbar-expand-md bg-light navbar-default mb-1">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Arham Yoga Certificate Generator</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <!-- <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </nav>
+  <div class="container">
+    <div class="mb-1" id="htmltoimage">
+      <img id="certificate" src="/certificatewithoutmarks.jpg" alt="">
+        <!-- <img id="certificate" class="d-md-none" width="100%" src="/seoworkshopcertificate (1).png" alt=""> -->
+        <div class="course-name2 d-none d-md-block mt-2" style="width: 70%;"><h2 style="color: #f98e25;"><%=title%></h2></div>
+                  <div class="course-name d-md-none mt-2" style="width: 70%;"><h5 style="font-size: 0.7rem; color: #f98e25;"><%=title%></h5></div>
+                  <div class="bottom-left3 d-none d-md-flex" style="font-size: 0.7rem; color: #f98e25"><%=moment(new Date()).format("DD MMM YYYY")%></div>
+                    <div class="bottom-left4 d-md-none" style="font-size: 0.5rem; color: #f98e25"><%=moment(new Date()).format("DD MMM YYYY")%></div>
+        <div class="participant-name d-none d-md-flex"><h2 style="color: #f98e25"><%=name%></h2></div>
+        <div class="participant-name2 mt-2 d-md-none"><p><strong style="color: #f98e25"><%=name%></strong></p></div>
+      </div>
+      <button onclick="downloadimage()" class="clickbtn btn btn-info">Download Certificate</button>
+
+  </div>
+    <!-- <div id="htmltoimage">
+        <div class="imgbg">
+            <img id="htmltoimage2" width="100%" src="/bmp.jpg" alt="" srcset="">
+        </div>
+        <h1>Demo page to show example of "How to Create and Download Image of HTML content in webpage Using html2canvas
+            library". Find tutorial page here <a
+                href="http://www.freakyjolly.com/convert-html-document-into-image-jpg-png-from-canvas/"
+                target="_blank">Here</a></h1>. Just click on button below to download Image of this HTML content which
+        is wrapped in an ID named "htmltoimage". Now I am typing some randome stuff, so that image downloaded will have
+        some content to show blah blah blah :P :D <br>
+        <button onclick="downloadimage()" class="clickbtn">Click To Download Image</button>
+    </div> -->
+
+</body>
+
+</html>

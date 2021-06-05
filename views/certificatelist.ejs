@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-4">
+<div class="col-md-3">
+  <img style="width: 100%" class="card-img-top" src="<%=logo%>" alt="Card image cap">
+
+</div>
+      </div>
+      <div class="row justify-content-center">
+        <p class="mt-4"><%=events.length==0? "No certificate found for this mobile number. Please try alternate number or contact the team" : ""%></p>
+        <%for(var certificate of events){%>
+        <div class="col-md-3 mt-5 mx-2">
+          <div class="card row justify-content-center text-center">
+            <div class="card-body">
+              <!-- <h4 class="card-title"><%=certificate["examination"]["examCode"]%></h4> -->
+              <p class="card-text">Issued to: <%=certificate["user"]["name"]%></p>
+              <%if(certificate["totalMarks"]>0){%>
+              <p>Obtained marks: <%=certificate["obtainedMarks"]%>/<%=certificate["totalMarks"]%> </p>
+              <%}%>
+              <form method="POST" action="/certificate">
+                <input type="hidden" name="resultid" value="<%=certificate['resultId']%>">
+                <button type="submit" class="btn btn-primary card-link btnsubmit">View/Download Certificate</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        <%}%>
+      </div>
+    </div>
+  </body>
+</html>
