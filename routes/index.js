@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var moment = require('moment');
 const fetch = require('node-fetch');
 const Bluebird = require('bluebird');
 fetch.Promise = Bluebird;
@@ -10,7 +9,6 @@ var passport = require('passport');
 router.get('/certificate/:resultid', function (req, res, next) {
   res.render("certificate", {resultid: req.params.resultid, imageurl: "http://arham-cds.ap-south-1.elasticbeanstalk.com/certificates/"+req.params.resultid})
 });
-
 router.get('/arhamqrcodegenerator', function (req, res, next) {
   res.render("qrcodegenerator");
 });
